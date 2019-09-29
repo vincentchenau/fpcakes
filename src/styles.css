@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* body {
+    background-image: url(assets/Mid-Winter-Christmas-Party-Web-Background-Banner.jpg);
+    background-attachment: fixed;
+} */
+
+ /* body{
+    background: linear-gradient(to bottom right, rgb(252, 191, 70), rgb(252, 194, 35));
+  } */
+
+  body {
+    background-color: rgb(255, 255, 255);
+  }

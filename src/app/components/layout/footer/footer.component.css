@@ -1,0 +1,17 @@
+.fab {
+    color: goldenrod;
+}
+.fab:hover {
+    color: #976522
+}
+.email-address {
+    color: goldenrod;
+}
+.email-address:hover {
+    color: #976522
+}
+
+
+/* *{
+    background-color: #EFEFEF;
+} */

@@ -1,0 +1,149 @@
+<div class="container">
+
+  <!-- News Slides -->
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="../../../assets/National-Day.jpg" alt="Random first slide" class="img-fluid">
+      </div>
+      <div class="carousel-caption">
+        <h3>周年庆活动</h3>
+        <p>
+          我们合作的超市本周六周日会有全场8.8折的店庆活动哦 包括我们的甜点哈
+          到时我们会进行现场推广，有免费试吃，全部产品8.8折，欢迎小哥哥小姐姐们来burwood找我哦</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="../../../assets/sample4.jpg" alt="Random second slide" class="img-fluid">
+      </div>
+      <div class="carousel-caption">
+        <h3>本周新产品开始接单啦</h3>
+        <p>大白兔卷 $23 400g，手工酸奶 可选紫米or红豆 500ml $7</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="../../../assets/danhuangsu.jpg" alt="Random third slide" class="img-fluid">
+      </div>
+      <div class="carousel-caption">
+        <h3>咱家各色蛋黄酥恢复供应</h3>
+        <p>中秋节🥮终于过去了咱有蛋黄啦哈哈哈
+
+            本周订购甜点有优惠呢</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+  <!-- Cake Categories -->
+  <div class="mt-3 py-3">
+    <h2 style="font-family: 'Chilanka', cursive; color: goldenrod" class=" title border-bottom">CATEGORY</h2>
+  </div>
+  <div class="row">
+    <div class="col-sm col-6 pb-3" *ngFor="let index of indexs">
+      <div class="card text-white category" (click)="onClickCard()" style="cursor: pointer" routerLink="/Gallery">
+        <img src={{index.src}} alt="" class="card-img">
+        <div class="card-img-overlay p-1">
+          <h5 class="card-title">
+            {{index.name}}
+            <br>
+            <small class="text-muted">{{index.num}} Products</small>
+          </h5>
+          <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="text-center mt-5 py-5">
+    <h2 style="font-family: 'Chilanka', cursive;" class="border-bottom">LATEST NEWS</h2>
+  </div>
+  <div class="card mb-5">
+    <img class="new" src="../../../assets/National-Day.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">看过来看过来
+        我们合作的超市本周六周日会有全场8.8折的店庆活动哦 包括我们的甜点哈
+        到时我们会进行现场推广，有免费试吃，全部产品8.8折，欢迎小哥哥小姐姐们来burwood找我哦</p>
+    </div>
+  </div> -->
+
+
+
+
+  <!-- <div class="text-center mt-5 py-5">
+    <h2 style="font-family: 'Chilanka', cursive;" class="border-bottom">NEW ARRIVAL</h2>
+  </div>
+  <div>
+    <div class="card-group mb-5 news">
+      <div class="card">
+        <img src="../../../assets/sample5.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title font-weight-bold">Welcome to FP Cake Design</h5>
+          <p class="card-text">We believe every event is worth celebrating.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="../../../assets/sample4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title font-weight-bold">本周新产品开始接单啦</h5>
+          <p class="card-text">大白兔卷 $23 400g，手工酸奶 可选紫米or红豆 500ml $7</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="../../../assets/sample3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title font-weight-bold">花觅定制蛋糕</h5>
+          <p class="card-text">水果马卡龙环，送你小心心。</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+
+  <!-- BESTSELLERS cards Scroll -->
+  <div class="mt-3 py-3">
+    <h2 style="font-family: 'Chilanka', cursive; color: goldenrod" class="title border-bottom">BESTSELLERS</h2>
+  </div>
+
+  <div id="bestSellersSlides" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item" *ngFor="let objs of indexs3; index as i; first as isFirst" [ngClass]="{ active: isFirst }">
+        
+        <div class="BESTSELLERS row">
+          <div class="col-sm-3 col-6" *ngFor="let obj of objs">
+            <div class="card my-2">
+              <img src={{obj.src}} alt="" class="card-img-top" class="img-fluid  bestSeller">
+              <div class="card-body p-1">
+                <p class="card-text text-center font-weight-bold m-0">
+                  {{obj.name}}
+                  <br>
+                  <small class="text-muted">$ {{obj.num}}</small>
+                </p>
+                <div class="text-center">
+                  <button class="btn btn-outline-warning btn-sm" (click)="onShowDetail()">See Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#bestSellersSlides" role="button" data-slide="prev" style="width:40px">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#bestSellersSlides" role="button" data-slide="next" style="width:40px">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+  </div>
+
+</div>

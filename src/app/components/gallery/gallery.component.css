@@ -1,0 +1,3 @@
+button {color: goldenrod; border-color: goldenrod }
+button:hover {background-color: goldenrod;border-color: goldenrod;color: honeydew}
+button:visited {background-color: goldenrod;border-color: goldenrod;color: honeydew}

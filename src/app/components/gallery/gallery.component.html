@@ -1,0 +1,25 @@
+<div class="container">
+
+  <div class="button-group">
+    <button class="btn btn-outline-warning" (click)="onShowAll()">Show All</button>
+    <button class="btn btn-outline-warning" *ngFor="let cat of catList; index as i" (click)="onShowX(i)">{{cat}}</button>
+    
+  </div>
+    <div class="row">
+      <div class="col-6 col-sm-4" *ngFor="let obj of cakes"  [ngClass]="{'d-none':isHidden[obj.type-1]}">
+
+          <div class="card" style="cursor: pointer;" (click)="onShowDetail()">
+              <img src="{{obj.src}}" class="card-img-top img-fluid" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{obj.name}}</h5>
+                <p class="card-text">{{ catList[obj.type-1] }}</p>
+                <p class="card-text"><small class="text-muted">${{obj.price}}</small></p>
+              </div>
+            </div>
+
+      </div>
+
+        
+
+
+</div>

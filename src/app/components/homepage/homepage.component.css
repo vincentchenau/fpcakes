@@ -1,0 +1,24 @@
+/* .card-group img{ width: auto; height: 460px; object-fit: cover; } */
+.bestSeller { width: auto; height: auto;  object-position: center;}
+.picsum-img-wrapper img{ width: 1110px; height: 600px; object-fit: cover; object-position: center;}
+/* h2 {text-shadow: black 0.1em 0.1em 0.2em} */
+h3 {text-shadow: black 0.1em 0.1em 0.2em}
+.title {text-shadow: goldenrod 0.1em 0.1em 1em}
+.card-title {text-shadow: black 0.1em 0.1em 0.2em}
+.carousel-caption p {text-shadow: black 0.1em 0.1em 0.2em}
+/* .category:hover {text-shadow: goldenrod 0.1em 0.1em 0.2em} */
+/* img.news { width:auto; height: auto; object-fit: contain; object-position: center;} */
+
+/* @font-face{
+    font-family: 'Jiaotang';
+    src : url('../../../assets/焦糖奶茶.ttf');
+}
+*{
+    font-family: 'Jiaotang', 'Times New Roman', Times, serif
+} */
+
+
+.carousel-control-prev:hover {opacity: 0.3; background-color: #000;}
+.carousel-control-next:hover {opacity: 0.3; background-color: #000;}
+button {color: goldenrod; border-color: goldenrod }
+button:hover {background-color: goldenrod;border-color: goldenrod;color: honeydew}
